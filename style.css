@@ -1,0 +1,176 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    user-select: none; /* Evita la selección de texto */
+    cursor: default;
+}
+html{
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(53, 180, 95, 1)
+}
+
+header,#circimg{
+    box-shadow:3px 3px 10px 1px rgba(0, 0, 0, 0.8)
+}
+#proy:hover,#link:hover,#git:hover,footer img:hover,#trabajos:hover{
+    transform: scale(1.1);
+    transition: 0.5s transform;
+}
+a{text-decoration: none;color:white;}
+
+header{
+    /* width: 80%; */
+    height: 85px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    margin: 50px 150px;
+    border-radius: 40px;
+    font-size: 20px;
+    color:white;
+}
+header > *{
+    padding: 30px;
+}
+
+#logo{
+    font-weight: 700;
+    flex-grow: 2;
+    font-size: 30px;
+    margin-left: 30px;
+}
+#proy,#link,#git{
+    font-weight: 600;
+}
+#git{padding-right: 45px;}
+
+
+#presentacion{
+    display: flex;
+    flex-direction: row;
+    height: 430px;
+    /* overflow: hidden; */
+    margin: 0px 200px;
+    font-weight: 500;
+    line-height: 1.2;
+    z-index: 1;
+    position:relative;
+    justify-content: space-around;
+}
+#presentacion img{
+    /* width: 450px; */
+    height: 450px;
+    filter: drop-shadow(5px 5px 5px #222);
+    position:relative;
+    bottom:150px;
+}
+
+#descripcion{max-width: 800px;}
+
+#p1{font-size: 50px;}
+#p2{font-size: 65px;}
+#p3{font-size: 40px;color:white;}
+#p4{font-size: 30px;color:rgb(103,103,103);margin-top: 30px;}
+
+#trabajos{
+    display: flex;
+    justify-content: center;
+    width: 240px;
+    padding: 13px;
+    border-radius:30px;
+    background-color: black;
+    color:white;
+    font-size: 25px;
+    margin-top: 15px;
+}
+#foto{
+    width: 400px;
+}
+
+#circimg{
+    background-color: black;
+    border-radius: 50%;
+    width: 370px;
+    height: 370px;
+    position:relative;
+    top:150px;
+}
+
+#proyectos{
+    background-color:black;
+    height: 500px;
+    border-top-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+#contproyectos{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+/* #contproyectos > div{ */
+#contproyectos > *{
+    height: 100%;
+    background-color: green;
+    width: 24%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position:relative;
+    /* box-shadow:3px 3px 15px 1px rgba(255, 255, 255, 0.2) */
+}
+#contproyectos video{
+    width: 1000px;
+}
+
+
+footer{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer img{
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px;
+}
+
+@keyframes animloop{
+    100%{width:80%;opacity: 1;}
+}
+@keyframes animloop2{
+    100%{width:30%;opacity: 1;}
+}
+
+#contproyectos > *:hover{
+    animation-iteration-count: 1;
+    animation-timing-function:ease;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+
+#loop:hover,#voley:hover,#brazo:hover{animation-name:animloop;}
+#calculadora:hover{animation-name:animloop2;}
+
+#contproyectos video{position:relative;}
+
+#vidcalc{top:15px;}
+#vidvoley{left:25px;}
