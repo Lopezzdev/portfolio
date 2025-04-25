@@ -9,11 +9,126 @@
 html{
     width: 100%;
     min-height: 100%;
-    background-color: rgba(53, 180, 95, 1)
+    /* background-color: black; */
+}
+body{
+    background-color: rgba(53, 180, 95, 1);
 }
 
-header,#circimg{
-    box-shadow:3px 3px 10px 1px rgba(0, 0, 0, 0.8)
+/* Menores de 750px */
+@media screen and (max-width:750px){ 
+    /* Contenedores */
+    #contproyectos{padding: 3%;flex-wrap: wrap;}
+    #contproyectos > *{
+        /* min-width: 100%; */
+        min-height: 100%;
+        height: 200px;
+    }
+    #contproyectos video{width: 700px;}
+    /* #contproyectos video{height: 100%;} */
+    #contproyectos a{transform: scale(1.2);}
+    /* Textos */
+    header{
+        height: 75px;
+        margin: 20px 30px;
+        border-radius: 40px;
+        font-size: 14px;
+    }
+    header > *{
+        padding: 10px;
+    }
+    #logo{
+        font-size: 19px;
+        margin-left:15px;
+    }
+    #git{padding-right: 25px;}
+    #presentacion{margin: 0px 30px;}
+    #p1{font-size: 25px;}
+    #p2{font-size: 35px;}
+    #p3{font-size: 20px;}
+    #p4{font-size: 18px;margin: 15px 0px;}
+
+    #foto{width: 200px;}
+
+    #presentacion img{
+        bottom:90px;
+        height: 250px;
+    }
+
+    #circimg{
+        width: 220px;
+        height: 220px;
+        bottom:-60px;
+    }
+
+    footer{height: 100px;}
+}
+
+/* Mayores de 750px */
+@media screen and (min-width:751px){ 
+
+    #contloop:hover,#contvoley:hover,#contbrazo:hover,#contcalculadora:hover{animation-name:animloop;}
+
+    #contloop:hover a{display: flex;}
+    #contvoley:hover a{display: flex;}
+    #contbrazo:hover a{display: flex;}
+    #contcalculadora:hover a{display: flex;}
+
+    #contproyectos a{
+        bottom:50%;
+        transform: translateY(50%);
+    }
+
+    /* Contenedores */
+    #contproyectos{padding: 0%;flex-wrap:nowrap;margin: 0px 20%;min-width: 600px;}
+    #contproyectos > *{
+        width: 24%;
+        height: 600px;
+    }
+    #contproyectos video{height: 100%;}
+    /* Textos */
+    header{
+        height: 85px;
+        margin: 50px 10%;
+        width: 80%;
+        border-radius: 42.5px;
+        font-size: 20px;
+    }
+    header > *{
+        padding: 1.5vw;
+    }
+    #logo{
+        font-size: 30px;
+        margin-left:2.5vw;
+    }
+    #git{padding-right: 3vw;}
+    #presentacion{width: 80%;margin:0px 12%;}
+    #descripcion{width: 60%;}
+    #p1{font-size: 50px;}
+    #p2{font-size: 60px;}
+    #p3{font-size: 40px;}
+    #p4{font-size: 30px;margin: 30px 0px 80px 0px;}
+
+    #foto{width: 40%;left:50px;}
+
+    main{overflow: hidden;}
+
+    #presentacion img{
+        bottom:100px;
+    }
+
+    #circimg{
+        width: 370px;
+        height: 370px;
+        bottom:-100px;
+    }
+
+    footer{height: 150px;}
+}
+
+
+header,#circimg,#contproyectos a{
+    box-shadow:3px 3px 10px 1px rgba(56, 55, 55, 0.8)
 }
 #proy:hover,#link:hover,#git:hover,footer img:hover,#trabajos:hover{
     transform: scale(1.1);
@@ -22,62 +137,39 @@ header,#circimg{
 a{text-decoration: none;color:white;}
 
 header{
-    /* width: 80%; */
-    height: 85px;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     background-color: black;
-    margin: 50px 150px;
-    border-radius: 40px;
-    font-size: 20px;
     color:white;
-}
-header > *{
-    padding: 30px;
 }
 
 #logo{
     font-weight: 700;
     flex-grow: 2;
-    font-size: 30px;
-    margin-left: 30px;
 }
 #proy,#link,#git{
     font-weight: 600;
 }
-#git{padding-right: 45px;}
-
 
 #presentacion{
     display: flex;
     flex-direction: row;
-    height: 430px;
-    /* overflow: hidden; */
-    margin: 0px 200px;
+    min-height: 250px;
     font-weight: 500;
     line-height: 1.2;
     z-index: 1;
     position:relative;
     justify-content: space-around;
 }
-#presentacion img{
-    /* width: 450px; */
-    height: 450px;
-    filter: drop-shadow(5px 5px 5px #222);
-    position:relative;
-    bottom:150px;
-}
 
-#descripcion{max-width: 800px;}
+#descripcion{max-width: 45vw;}
 
-#p1{font-size: 50px;}
-#p2{font-size: 65px;}
-#p3{font-size: 40px;color:white;}
-#p4{font-size: 30px;color:rgb(103,103,103);margin-top: 30px;}
+#p3{color:white;}
+#p4{color:rgb(103,103,103);}
 
-#trabajos{
+/* #trabajos{
     display: flex;
     justify-content: center;
     width: 240px;
@@ -87,60 +179,51 @@ header > *{
     color:white;
     font-size: 25px;
     margin-top: 15px;
-}
-#foto{
-    width: 400px;
-}
+} */
 
+#foto{position:relative;display: flex;justify-content: center;}
+
+#presentacion img{
+    filter: drop-shadow(5px 5px 5px #222);
+    position:relative;
+}
 #circimg{
+    display: flex;
+    justify-content: center;
     background-color: black;
     border-radius: 50%;
-    width: 370px;
-    height: 370px;
-    position:relative;
-    top:150px;
+    position:absolute;
 }
 
 #proyectos{
     background-color:black;
-    height: 500px;
-    border-top-left-radius: 150px;
-    border-bottom-right-radius: 150px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2;
     position: relative;
+    padding: 30px;
 }
 #contproyectos{
-    width: 80%;
-    height: 80%;
     display: flex;
     justify-content: space-between;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    overflow: hidden;
 }
-/* #contproyectos > div{ */
 #contproyectos > *{
-    height: 100%;
-    background-color: green;
-    width: 24%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    margin: 2px;
     opacity: 0.4;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    position:relative;
-    /* box-shadow:3px 3px 15px 1px rgba(255, 255, 255, 0.2) */
-}
-#contproyectos video{
-    width: 1000px;
 }
 
 
 footer{
-    height: 150px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -153,13 +236,16 @@ footer img{
 }
 
 @keyframes animloop{
-    100%{width:80%;opacity: 1;}
+    100%{width:50%;opacity: 1;}
 }
 @keyframes animloop2{
-    100%{width:30%;opacity: 1;}
+    100%{height:300px;opacity: 1;}
+}
+@keyframes animloop3{
+    100%{height:200px;opacity: 0.4;}
 }
 
-#contproyectos > *:hover{
+#contproyectos > *{
     animation-iteration-count: 1;
     animation-timing-function:ease;
     animation-duration: 1s;
@@ -167,10 +253,16 @@ footer img{
     animation-fill-mode: forwards;
 }
 
-#loop:hover,#voley:hover,#brazo:hover{animation-name:animloop;}
-#calculadora:hover{animation-name:animloop2;}
+/* #contproyectos video{position:relative;} */
 
-#contproyectos video{position:relative;}
-
-#vidcalc{top:15px;}
-#vidvoley{left:25px;}
+#contproyectos a{
+    /* width: 100px; */
+    /* height: 50px; */
+    background-color: rgba(53, 180, 95, 1);
+    position:absolute;
+    padding: 5px 20px;
+    color: black;
+    border-radius: 20px;
+    font-size: 15px;
+    display: none;
+}
